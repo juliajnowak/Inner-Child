@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Inner Child</title>
+    <link rel="icon" type="image/x-icon" href="inner-child-logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  </head> 
+  <body class="fullBody">
+    <main>
+      <div class = "buttonContainer">
+      <input class = "myInput">
+        <button class="myButton">Send Your Message</button>
+      </div>
+      </div>
+    </main>
+    <script src="sketch.js"></script>
+    <div class="center">
+      <div class="container">
+
+        <div class="display-date">
+          <span id="day">day</span>,
+          <span id="daynum">00</span>
+          <span id="month">month</span>
+          <span id="year">0000</span>
+        </div>
+        <div class="display-time"></div>
+      </div>
+    
+      <img src="inner-child-logo.png" height = "186" alt="logo">
+      <div class="description-1">Write an <span class="scale">anonymous</span> message to your own inner child:</div></div>
+  
+      <div class="circle"></div>
+      <div class="white-flower"><img src="white-flower copy.png" height = "181" alt="white-flower"></div>
+      <div class="white-butterfly"><img src="white-butterfly.png" height = "200" alt="white-butterfly"></div>
+      <div class="animated-butterfly"><img src="butterfly-flying.gif" height = "300" alt="animated-butterfly"></div>
+        <div class="explanation2">Everyone has an inner child, which is the part of you that still feels like the child 
+          you once were. This child <span class="scale">stems from your past</span>, with experiences that have helped <span class="scale">shape you into who you are today.</span> After skimming "Inner Child," think about what you might say to your own inner child, something that you may wish you could have heard before.</div>
+      <div class="sparkle-flowers"><img src="sparkle-flowers.gif" height = "200" alt="sparkle"></div>
+      <div class="lamp"><img src="lamp.gif" height = "350" alt="lamp"></div>
+      <div class="rocks"><img src="rocks.png" height = "660" alt="rocks"></div>
+      <div class="orange"><img src="orange.png" height = "160" alt="orange"></div>
+      <div class="leaf"><img src="leaf.png" height = "460" alt="leaf"></div>
+      <div class="mom"><img src="mom.png" height = "460" alt="mom"></div>
+      <div class="hidden-text-1">"It's okay to feel sad or anxious sometimes"</div>
+      <div class="hidden-text-2">"You're important to people"</div>
+      <div class="hidden-text-3">"It's okay to want things to be different"</div>
+      
+
+
+      
+    <script>
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+
+  </script>
+
+
+  
+  
+  
+    </body>
+  
+  
+</html>
